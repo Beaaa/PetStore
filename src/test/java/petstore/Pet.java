@@ -38,6 +38,33 @@ public class Pet {
                 .body("category.name", is("dog"))
                 .body("tags.id", contains(2021)) // se a chave tiver uma lista, for seguida de colchetes, precisa usar o contains pra pegar o valor
                 .body("tags.name", contains("sta"))
-                ;
+        ;
     }
+
+    @Test
+    public void consultarPet(){
+        String petId = "599170";
+
+        String name = //salvando nessa variavel a informação extraída na linha 61
+        given()
+                .contentType("application/json")
+                .log().all()
+        .when()
+                .get(uri + "/" + petId)
+        .then()
+                .log().all()
+                .statusCode(200)
+                .body("name", is("Cibelly"))
+                .body("category.name", is("dog"))
+                .body("tags.id", contains(2021)) // se a chave tiver uma lista, for seguida de colchetes, precisa usar o contains pra pegar o valor
+                .body("tags.name", contains("sta"))
+        .extract()//extraindo informação pra salvar numa variavel
+                .path("name")
+        ;
+
+        System.out.println("Nome do animal: " + name );
+
+
+    }
+
  }
