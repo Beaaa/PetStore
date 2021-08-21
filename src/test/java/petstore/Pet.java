@@ -1,12 +1,17 @@
 package petstore;
 
+import io.restassured.specification.Argument;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.List;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.Matchers.contains;
+
 
 public class Pet {
 
@@ -28,6 +33,11 @@ public class Pet {
                 .post(uri)
         .then()
                 .log().all()
-                .statusCode(200);
+                .statusCode(200)
+                .body("name", is("Cibelly"))
+                .body("category.name", is("dog"))
+                .body("tags.id", contains(2021)) // se a chave tiver uma lista, for seguida de colchetes, precisa usar o contains pra pegar o valor
+                .body("tags.name", contains("sta"))
+                ;
     }
-}
+ }
