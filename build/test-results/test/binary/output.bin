@@ -1,0 +1,194 @@
+Request method:	PUT
+1Request URI:	https://petstore.swagger.io/v2/pet
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+2				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "id": 599170,
+    "category": {
+        "id": 1,
+        "name": "dog"
+    },
+    "name": "Cibelly",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+
+        {
+            "id": 2021,
+            "name": "sta"
+
+        }
+    ],
+    "status": "sold"
+}
+HTTP/1.1 200 OK
+%Date: Sat, 21 Aug 2021 03:29:42 GMT
+ Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+ Access-Control-Allow-Origin: *
+6Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+DAccess-Control-Allow-Headers: Content-Type, api_key, Authorization
+ Server: Jetty(9.2.9.v20150224)
+
+{
+    "id": 599170,
+    "category": {
+        "id": 1,
+        "name": "dog"
+    },
+    "name": "Cibelly",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+
+        {
+            "id": 2021,
+            "name": "sta"
+
+        }
+    ],
+    "status": "sold"
+}
+Request method:	GET
+8Request URI:	https://petstore.swagger.io/v2/pet/599170
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+2				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+%Date: Sat, 21 Aug 2021 03:29:43 GMT
+ Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+ Access-Control-Allow-Origin: *
+6Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+DAccess-Control-Allow-Headers: Content-Type, api_key, Authorization
+ Server: Jetty(9.2.9.v20150224)
+
+{
+    "id": 599170,
+    "category": {
+        "id": 1,
+        "name": "dog"
+    },
+    "name": "Cibelly",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+
+        {
+            "id": 2021,
+            "name": "sta"
+
+        }
+    ],
+    "status": "sold"
+}
+Nome do animal: Cibelly
+Request method:	DELETE
+8Request URI:	https://petstore.swagger.io/v2/pet/599170
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+2				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+%Date: Sat, 21 Aug 2021 03:29:44 GMT
+ Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+ Access-Control-Allow-Origin: *
+6Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+DAccess-Control-Allow-Headers: Content-Type, api_key, Authorization
+ Server: Jetty(9.2.9.v20150224)
+
+{
+    "code": 200,
+    "type": "unknown",
+    "message": "599170"
+}
+Request method:	POST
+1Request URI:	https://petstore.swagger.io/v2/pet
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+2				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "id": 599170,
+    "category": {
+        "id": 1,
+        "name": "dog"
+    },
+    "name": "Cibelly",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+
+        {
+            "id": 2021,
+            "name": "sta"
+
+        }
+    ],
+    "status": "available"
+}
+HTTP/1.1 200 OK
+%Date: Sat, 21 Aug 2021 03:29:44 GMT
+ Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+ Access-Control-Allow-Origin: *
+6Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+DAccess-Control-Allow-Headers: Content-Type, api_key, Authorization
+ Server: Jetty(9.2.9.v20150224)
+
+{
+    "id": 599170,
+    "category": {
+        "id": 1,
+        "name": "dog"
+    },
+    "name": "Cibelly",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+
+        {
+            "id": 2021,
+            "name": "sta"
+
+        }
+    ],
+    "status": "available"
+}
