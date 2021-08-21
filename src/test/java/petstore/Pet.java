@@ -17,6 +17,9 @@ public class Pet {
 
     String uri = "https://petstore.swagger.io/v2/pet";
 
+    public Pet() throws IOException {
+    }
+
     public String lerJson(String caminhoJson) throws IOException {
         return new String(Files.readAllBytes(Paths.get(caminhoJson)));
     }
@@ -64,7 +67,28 @@ public class Pet {
 
         System.out.println("Nome do animal: " + name );
 
-
     }
+
+    @Test
+    public void alterarPet() throws IOException {
+        String jsonBody =lerJson("db/pet2.json");
+
+        given()
+                .contentType("application/json")
+                .log().all()
+                .body(jsonBody)
+        .when()
+                .put(uri)
+        .then()
+                .log().all()
+                .statusCode(200)
+                .body("name", is("Cibelly"))
+                .body("category.name", is("dog"))
+                .body("tags.id", contains(2021)) // se a chave tiver uma lista, for seguida de colchetes, precisa usar o contains pra pegar o valor
+                .body("tags.name", contains("sta"))
+                .body("status", is("sold"))
+        ;
+    }
+
 
  }
